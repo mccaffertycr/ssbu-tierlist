@@ -1,0 +1,10 @@
+.tierlist-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-content: flex-start;
+  width: 90%;
+  color: white;
+  margin: 0 auto;
+}

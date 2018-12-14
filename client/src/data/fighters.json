@@ -1,0 +1,372 @@
+[
+  {
+    "id": 1,
+    "name": "Mario",
+    "url": "assets/img/mario.png"
+  },
+  {
+    "id": 2,
+    "name": "Donkey Kong",
+    "url": "assets/img/donkey_kong.png"
+  },
+  {
+    "id": 3,
+    "name": "Link",
+    "url": "assets/img/link.png"
+  },
+  {
+    "id": 4,
+    "name": "Samus",
+    "url": "assets/img/samus.png"
+  },
+  {
+    "id": 4.1,
+    "name": "Dark Samus",
+    "url": "assets/img/dark_samus.png"
+  },
+  {
+    "id": 5,
+    "name": "Yoshi",
+    "url": "assets/img/yoshi.png"
+  },
+  {
+    "id": 6,
+    "name": "Kirby",
+    "url": "assets/img/kirby.png"
+  },
+  {
+    "id": 7,
+    "name": "Fox",
+    "url": "assets/img/fox.png"
+  },
+  {
+    "id": 8,
+    "name": "Pikachu",
+    "url": "assets/img/pikachu.png"
+  },
+  {
+    "id": 9,
+    "name": "Luigi",
+    "url": "assets/img/luigi.png"
+  },
+  {
+    "id": 10,
+    "name": "Ness",
+    "url": "assets/img/ness.png"
+  },
+  {
+    "id": 11,
+    "name": "Captain Falcon",
+    "url": "assets/img/captain_falcon.png"
+  },
+  {
+    "id": 12,
+    "name": "Jigglypuff",
+    "url": "assets/img/jigglypuff.png"
+  },
+  {
+    "id": 13,
+    "name": "Peach",
+    "url": "assets/img/peach.png"
+  },
+  {
+    "id": 13.1,
+    "name": "Daisy",
+    "url": "assets/img/daisy.png"
+  },
+  {
+    "id": 14,
+    "name": "Bowser",
+    "url": "assets/img/bowser.png"
+  },
+  {
+    "id": 15,
+    "name": "Ice Climbers",
+    "url": "assets/img/ice_climbers.png"
+  },
+  {
+    "id": 16,
+    "name": "Sheik",
+    "url": "assets/img/sheik.png"
+  },
+  {
+    "id": 17,
+    "name": "Zelda",
+    "url": "assets/img/zelda.png"
+  },
+  {
+    "id": 18,
+    "name": "Dr. Mario",
+    "url": "assets/img/dr_mario.png"
+  },
+  {
+    "id": 19,
+    "name": "Pichu",
+    "url": "assets/img/pichu.png"
+  },
+  {
+    "id": 20,
+    "name": "Falco",
+    "url": "assets/img/falco.png"
+  },
+  {
+    "id": 21,
+    "name": "Marth",
+    "url": "assets/img/marth.png"
+  },
+  {
+    "id": 21.1,
+    "name": "Lucina",
+    "url": "assets/img/lucina.png"
+  },
+  {
+    "id": 22,
+    "name": "Young Link",
+    "url": "assets/img/young_link.png"
+  },
+  {
+    "id": 23,
+    "name": "Ganondorf",
+    "url": "assets/img/ganondorf.png"
+  },
+  {
+    "id": 24,
+    "name": "Mewtwo",
+    "url": "assets/img/mewtwo.png"
+  },
+  {
+    "id": 25,
+    "name": "Roy",
+    "url": "assets/img/roy.png"
+  },
+  {
+    "id": 25.1,
+    "name": "Chrom",
+    "url": "assets/img/chrom.png"
+  },
+  {
+    "id": 26,
+    "name": "Mr. Game & Watch",
+    "url": "assets/img/mr_game_&_watch.png"
+  },
+  {
+    "id": 27,
+    "name": "Meta Knight",
+    "url": "assets/img/meta_knight.png"
+  },
+  {
+    "id": 28,
+    "name": "Pit",
+    "url": "assets/img/pit.png"
+  },
+  {
+    "id": 28.1,
+    "name": "Dark Pit",
+    "url": "assets/img/dark_pit.png"
+  },
+  {
+    "id": 29,
+    "name": "Zero Suit Samus",
+    "url": "assets/img/zero_suit_samus.png"
+  },
+  {
+    "id": 30,
+    "name": "Wario",
+    "url": "assets/img/wario.png"
+  },
+  {
+    "id": 31,
+    "name": "Snake",
+    "url": "assets/img/snake.png"
+  },
+  {
+    "id": 32,
+    "name": "Ike",
+    "url": "assets/img/ike.png"
+  },
+  {
+    "id": 33,
+    "name": "Pokemon Trainer",
+    "url": "assets/img/pokemon_trainer.png"
+  },
+  {
+    "id": 36,
+    "name": "Diddy Kong",
+    "url": "assets/img/diddy_kong.png"
+  },
+  {
+    "id": 37,
+    "name": "Lucas",
+    "url": "assets/img/lucas.png"
+  },
+  {
+    "id": 38,
+    "name": "Sonic",
+    "url": "assets/img/sonic.png"
+  },
+  {
+    "id": 39,
+    "name": "King Dedede",
+    "url": "assets/img/king_dedede.png"
+  },
+  {
+    "id": 40,
+    "name": "Olimar",
+    "url": "assets/img/olimar.png"
+  },
+  {
+    "id": 41,
+    "name": "Lucario",
+    "url": "assets/img/lucario.png"
+  },
+  {
+    "id": 42,
+    "name": "R.O.B.",
+    "url": "assets/img/rob.png"
+  },
+  {
+    "id": 43,
+    "name": "Toon Link",
+    "url": "assets/img/toon_link.png"
+  },
+  {
+    "id": 44,
+    "name": "Wolf",
+    "url": "assets/img/wolf.png"
+  },
+  {
+    "id": 45,
+    "name": "Villager",
+    "url": "assets/img/villager.png"
+  },
+  {
+    "id": 46,
+    "name": "Mega Man",
+    "url": "assets/img/mega_man.png"
+  },
+  {
+    "id": 47,
+    "name": "Wii Fit Trainer",
+    "url": "assets/img/wii_fit_trainer.png"
+  },
+  {
+    "id": 48,
+    "name": "Rosalina & Luma",
+    "url": "assets/img/rosalina.png"
+  },
+  {
+    "id": 49,
+    "name": "Little Mac",
+    "url": "assets/img/little_mac.png"
+  },
+  {
+    "id": 50,
+    "name": "Greninja",
+    "url": "assets/img/greninja.png"
+  },
+  {
+    "id": 51,
+    "name": "Mii Brawler",
+    "url": "assets/img/mii_brawler.png"
+  },
+  {
+    "id": 52,
+    "name": "Mii Swordfighter",
+    "url": "assets/img/mii_swordfighter.png"
+  },
+  {
+    "id": 53,
+    "name": "Mii Gunner",
+    "url": "assets/img/mii_gunner.png"
+  },
+  {
+    "id": 54,
+    "name": "Palutena",
+    "url": "assets/img/palutena.png"
+  },
+  {
+    "id": 55,
+    "name": "Pac-man",
+    "url": "assets/img/pac-man.png"
+  },
+  {
+    "id": 56,
+    "name": "Robin",
+    "url": "assets/img/robin.png"
+  },
+  {
+    "id": 57,
+    "name": "Shulk",
+    "url": "assets/img/shulk.png"
+  },
+  {
+    "id": 58,
+    "name": "Bowser Jr.",
+    "url": "assets/img/bowser_jr.png"
+  },
+  {
+    "id": 59,
+    "name": "Duck Hunt",
+    "url": "assets/img/duck_hunt.png"
+  },
+  {
+    "id": 60,
+    "name": "Ryu",
+    "url": "assets/img/ryu.png"
+  },
+  {
+    "id": 60.1,
+    "name": "Ken",
+    "url": "assets/img/ken.png"
+  },
+  {
+    "id": 61,
+    "name": "Cloud",
+    "url": "assets/img/cloud.png"
+  },
+  {
+    "id": 62,
+    "name": "Corrin",
+    "url": "assets/img/corrin.png"
+  },
+  {
+    "id": 63,
+    "name": "Bayonetta",
+    "url": "assets/img/bayonetta.png"
+  },
+  {
+    "id": 64,
+    "name": "Inkling",
+    "url": "assets/img/inkling.png"
+  },
+  {
+    "id": 65,
+    "name": "Ridley",
+    "url": "assets/img/ridley.png"
+  },
+  {
+    "id": 66,
+    "name": "Simon",
+    "url": "assets/img/simon.png"
+  },
+  {
+    "id": 66.1,
+    "name": "Richter",
+    "url": "assets/img/richter.png"
+  },
+  {
+    "id": 67,
+    "name": "King K. Rool",
+    "url": "assets/img/king_k_rool.png"
+  },
+  {
+    "id": 68,
+    "name": "Villager",
+    "url": "assets/img/villager.png"
+  },
+  {
+    "id": 69,
+    "name": "Incineroar",
+    "url": "assets/img/incineroar.png"
+  }
+]
