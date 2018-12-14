@@ -5,7 +5,7 @@ const uri =
   process.env.MONGODB_URI || 'mongodb://localhost:27017/ssbu-tierlist-dev';
 const options = { useNewUrlParser: true, useCreateIndex: true };
 
-const database = mongoose
+mongoose
   .connect(
     uri,
     options
@@ -19,4 +19,4 @@ const database = mongoose
     }
   );
 
-module.exports = database;
+module.exports = mongoose.connection;
