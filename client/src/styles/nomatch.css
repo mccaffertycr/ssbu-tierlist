@@ -1,0 +1,13 @@
+.no-match {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  width: 80%;
+  background: black;
+  color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+}

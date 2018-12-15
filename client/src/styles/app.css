@@ -6,4 +6,6 @@
   align-content: space-between;
   align-items: flex-start;
   background-color: gainsboro;
+  height: 100%;
+  min-height: 100%;
 }
