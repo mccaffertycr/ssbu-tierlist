@@ -1,0 +1,11 @@
+.fighters-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black;
+  width: 40%;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+}

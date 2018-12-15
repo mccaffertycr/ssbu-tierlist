@@ -1,24 +1,12 @@
 import React from 'react';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import Fighter from './Fighter';
+import '../styles/fighterscontainer.css';
 
 const FightersContainer = props => (
   <Droppable droppableId='droppable'>
     {provided => (
-      <div
-        ref={provided.innerRef}
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          backgroundColor: 'black',
-          width: '40%',
-          margin: '10px 0',
-          padding: 10,
-          borderRadius: 5,
-        }}
-      >
+      <div ref={provided.innerRef} className='fighters-container'>
         {props.fighters
           ? props.fighters.map((f, index) => (
               <Draggable
