@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import tiers from '../data/tiers.json';
 import fighters from '../data/fighters.json';
 import api from '../utils/api';
 import { DragDropContext } from 'react-beautiful-dnd';
@@ -150,7 +149,6 @@ class Create extends Component {
           title={this.state.title}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
-          tiers={tiers}
           sTier={this.state.sTier}
           aTier={this.state.aTier}
           bTier={this.state.bTier}

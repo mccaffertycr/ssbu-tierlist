@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -37,11 +38,22 @@ class DropdownMenu extends React.Component {
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
         >
-          <MenuItem onClick={this.handleClose}>High Rated</MenuItem>
-          <MenuItem onClick={this.handleClose}>Most Recent</MenuItem>
-          {/* <MenuItem onClick={this.handleClose}>Average</MenuItem> */}
+          <MenuItem onClick={this.handleClose}>
+            <Link to='/top'>High Rated</Link>{' '}
+          </MenuItem>
+          <MenuItem onClick={this.handleClose}>
+            <Link to='/new'>Most Recent</Link>
+          </MenuItem>
+          <MenuItem onClick={this.handleClose}>
+            <Link to='/random'>Random</Link>
+          </MenuItem>
+          {/* <MenuItem onClick={this.handleClose}>
+            <Link to='/average'>Average</Link>
+          </MenuItem> */}
           <hr />
-          <MenuItem onClick={this.handleClose}>Create Tierlist</MenuItem>
+          <MenuItem onClick={this.handleClose}>
+            <Link to='/create'>Create Tierlist</Link>
+          </MenuItem>
         </Menu>
       </div>
     );

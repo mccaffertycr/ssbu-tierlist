@@ -7,6 +7,7 @@ const NewTierlistForm = props => {
   return (
     <form className='tierlist-form' noValidate autoComplete='off'>
       <TextField
+        style={{ margin: 2 }}
         id='outlined-title'
         label='title'
         name='title'
@@ -16,6 +17,7 @@ const NewTierlistForm = props => {
         variant='outlined'
       />
       <TextField
+        style={{ margin: 2 }}
         className='textfield'
         id='outlined-name'
         label='your name'
@@ -26,6 +28,7 @@ const NewTierlistForm = props => {
         variant='outlined'
       />
       <Button
+        style={{ margin: 2 }}
         type='submit'
         variant='outlined'
         color='primary'

@@ -12,7 +12,7 @@ const Tier = props => {
           fontSize: 64,
           webKitTextStroke: '2 black',
           margin: 5,
-          minWidth: '4.5rem',
+          maxWidth: '4rem',
         }}
         id={`${props.header}-header`}
       >
@@ -28,6 +28,7 @@ const Tier = props => {
                 flexDirection: 'row',
                 flexWrap: 'wrap',
                 width: '80%',
+                minWidth: '70%',
               }}
             >
               {props.fighters
@@ -54,7 +55,7 @@ const Tier = props => {
           )}
         </Droppable>
       ) : (
-        props.fighters.map(f => <Fighter {...f} />)
+        props.fighters.map(f => <Fighter key={f.id} {...f} />)
       )}
     </div>
   );

@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
+import Tierlist from '../components/Tierlist';
 import api from '../utils/api';
 
 class Random extends Component {
-  onComponentDidMount() {
+  state = {
+    sTier: [],
+    aTier: [],
+    bTier: [],
+    cTier: [],
+    dTier: [],
+    title: '',
+    author: '',
+    upvotes: '',
+    createdAt: '',
+    _id: '',
+  };
+
+  componentDidMount() {
     this.getRandomTierlist();
   }
 
@@ -10,9 +24,17 @@ class Random extends Component {
     api
       .getRandomTierlist()
       .then(res => {
-        console.log(res);
+        this.setState({ ...res.data[0] });
       })
       .catch(err => console.log(err));
+  }
+
+  render() {
+    return (
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <Tierlist key={this.state._id} editable={false} {...this.state} />
+      </div>
+    );
   }
 }
 

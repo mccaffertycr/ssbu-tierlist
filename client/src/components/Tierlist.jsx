@@ -2,6 +2,7 @@ import React from 'react';
 import Tier from './Tier';
 import TierlistInfo from './TierlistInfo';
 import NewTierlistForm from './NewTierlistForm';
+import tiers from '../data/tiers';
 import '../styles/tierlist.css';
 
 const getFighters = (props, tier) => {
@@ -32,10 +33,15 @@ const Tierlist = props => {
           handleFormSubmit={props.handleFormSubmit}
         />
       ) : (
-        <TierlistInfo />
+        <TierlistInfo
+          author={props.author}
+          title={props.title}
+          createdAt={props.createdAt}
+          upvotes={props.upvotes}
+        />
       )}
       {props.editable
-        ? props.tiers.map(t => (
+        ? tiers.map(t => (
             <Tier
               key={t}
               header={t}
@@ -43,7 +49,7 @@ const Tierlist = props => {
               fighters={getFighters(props, t)}
             />
           ))
-        : props.tiers.map(t => (
+        : tiers.map(t => (
             <Tier
               key={t}
               header={t}
