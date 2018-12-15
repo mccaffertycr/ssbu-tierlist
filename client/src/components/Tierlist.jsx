@@ -28,8 +28,8 @@ const Tierlist = props => {
         <NewTierlistForm
           name={props.name}
           title={props.title}
-          onInputChange={() => props.onInputChange}
-          onHandleSubmit={() => props.onHandleSubmit}
+          handleInputChange={props.handleInputChange}
+          handleFormSubmit={props.handleFormSubmit}
         />
       ) : (
         <TierlistInfo />

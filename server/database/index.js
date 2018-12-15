@@ -11,10 +11,10 @@ mongoose
     options
   )
   .then(
-    () => console.log('successfully connected to Mongo'),
+    () => console.log('-> successfully connected to Mongo'),
 
     err => {
-      console.log('error connecting to Mongo: ');
+      console.log('-> error connecting to Mongo: ');
       console.log(err);
     }
   );

@@ -7,21 +7,21 @@ const NewTierlistForm = props => {
   return (
     <form className='tierlist-form' noValidate autoComplete='off'>
       <TextField
-        className='textfield'
-        id='outlined-name'
-        label='name'
-        name='name'
-        value={props.name}
-        onChange={() => props.handleChange}
+        id='outlined-title'
+        label='title'
+        name='title'
+        value={props.title}
+        onChange={e => props.handleInputChange(e)}
         margin='normal'
         variant='outlined'
       />
       <TextField
-        id='outlined-title'
-        label='title'
-        name='title'
+        className='textfield'
+        id='outlined-name'
+        label='your name'
+        name='name'
         value={props.name}
-        onChange={() => props.handleChange()}
+        onChange={e => props.handleInputChange(e)}
         margin='normal'
         variant='outlined'
       />
@@ -29,7 +29,7 @@ const NewTierlistForm = props => {
         type='submit'
         variant='outlined'
         color='primary'
-        onClick={() => props.onHandleSubmit()}
+        onClick={e => props.handleFormSubmit(e)}
       >
         save
       </Button>

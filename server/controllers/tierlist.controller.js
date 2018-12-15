@@ -45,7 +45,9 @@ module.exports = {
   createTierlist: (req, res) => {
     tierlist
       .create(req.body)
-      .then(dbTierlist => console.log(dbTierlist))
+      .then(dbTierlist => {
+        res.send('new tierlist successfully created!');
+      })
       .catch(err => res.status(422).json(err));
   },
   upvoteTierlist: (req, res) => {

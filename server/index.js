@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -31,5 +31,5 @@ app.use(
 app.use(api);
 
 app.listen(PORT, () =>
-  console.log(`> API Server now listening on PORT ${PORT}!`)
+  console.log(`-> API Server now listening on PORT ${PORT}!`)
 );

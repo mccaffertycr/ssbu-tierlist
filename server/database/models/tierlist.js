@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const TierlistSchema = new Schema({
   author: { type: String, required: false },
-  title: { type: string, required: false },
+  title: { type: String, required: false },
   sTier: [],
   aTier: [],
   bTier: [],

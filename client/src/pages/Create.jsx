@@ -77,13 +77,15 @@ class Create extends Component {
         bTier: this.state.bTier,
         cTier: this.state.cTier,
         dTier: this.state.dTier,
-        unused: this.state.unused,
+        unused: this.state.fighters,
         title: this.state.title,
-        name: this.state.name ? this.state.name : 'anonymous',
+        author: this.state.name ? this.state.name : 'anonymous',
       })
       .then(res => {
-        console.log(res);
-        this.setState({ title: '', name: '' });
+        if (res.status === 200) {
+          alert(res.data);
+          this.setState({ title: '', name: '' });
+        }
       })
       .catch(err => console.log(err));
   };
@@ -144,6 +146,8 @@ class Create extends Component {
         <FightersContainer fighters={this.state.fighters} />
         <Tierlist
           editable={true}
+          name={this.state.name}
+          title={this.state.title}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
           tiers={tiers}
