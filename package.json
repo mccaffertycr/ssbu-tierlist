@@ -1,0 +1,26 @@
+{
+  "name": "ssbu-tierlist",
+  "version": "1.0.0",
+  "description": "tierlist building tool for Super Smash Bros. Ultimate",
+  "main": "server/index.js",
+  "scripts": {
+    "start:dev": "concurrently \"nodemon\" \" cd client && npm run start\"",
+    "start:prod": "node",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mccaffertycr/ssbu-tierlist.git"
+  },
+  "author": "Connor McCafferty <mccaffertycr@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mccaffertycr/ssbu-tierlist/issues"
+  },
+  "homepage": "https://github.com/mccaffertycr/ssbu-tierlist#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9"
+  }
+}
