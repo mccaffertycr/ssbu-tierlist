@@ -8,6 +8,12 @@ module.exports = {
       .then(dbTierlist => res.json(dbTierlist))
       .catch(err => res.status(422).json(err));
   },
+  findRandomTierlist: (req, res) => {
+    tierlist
+      .aggregate([{ $sample: { size: 1 } }])
+      .then(dbTierlist => res.json(dbTierlist))
+      .catch(err => res.status(422).json(err));
+  },
   findAllTierlists: (req, res) => {
     const { limit, offset } = req.body;
     tierlist

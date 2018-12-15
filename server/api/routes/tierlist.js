@@ -10,6 +10,8 @@ router.route('/new').get(tierlistController.findNewTierlists);
 
 router.route('/top').get(tierlistController.findTopTierlists);
 
+router.route('/random').get(tierlistController.findRandomTierlist);
+
 router
   .route('/:id')
   .get(tierlistController.findTierlistById)
