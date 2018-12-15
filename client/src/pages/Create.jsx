@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import tiers from '../data/tiers.json';
 import fighters from '../data/fighters.json';
+import api from '../utils/api';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Tierlist from '../components/Tierlist';
 import FightersContainer from '../components/FightersContainer';
@@ -41,6 +42,8 @@ class Create extends Component {
       bTier: [],
       cTier: [],
       dTier: [],
+      title: '',
+      name: '',
     };
 
     this.id2List = {
@@ -51,9 +54,39 @@ class Create extends Component {
       droppableC: 'cTier',
       droppableD: 'dTier',
     };
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.getList = this.getList.bind(this);
     this.onDragEnd = this.onDragEnd.bind(this);
   }
+
+  handleInputChange = event => {
+    event.preventDefault();
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    api
+      .saveTierlist({
+        sTier: this.state.sTier,
+        aTier: this.state.aTier,
+        bTier: this.state.bTier,
+        cTier: this.state.cTier,
+        dTier: this.state.dTier,
+        unused: this.state.unused,
+        title: this.state.title,
+        name: this.state.name ? this.state.name : 'anonymous',
+      })
+      .then(res => {
+        console.log(res);
+        this.setState({ title: '', name: '' });
+      })
+      .catch(err => console.log(err));
+  };
 
   getList = id => this.state[this.id2List[id]];
 
@@ -111,6 +144,8 @@ class Create extends Component {
         <FightersContainer fighters={this.state.fighters} />
         <Tierlist
           editable={true}
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
           tiers={tiers}
           sTier={this.state.sTier}
           aTier={this.state.aTier}

@@ -54,7 +54,7 @@ const Tier = props => {
           )}
         </Droppable>
       ) : (
-        props.fighters.map((f, index) => <Fighter {...f} />)
+        props.fighters.map(f => <Fighter {...f} />)
       )}
     </div>
   );

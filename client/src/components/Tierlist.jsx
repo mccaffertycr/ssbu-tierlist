@@ -1,6 +1,7 @@
 import React from 'react';
 import Tier from './Tier';
 import TierlistInfo from './TierlistInfo';
+import NewTierlistForm from './NewTierlistForm';
 import '../styles/tierlist.css';
 
 const getFighters = (props, tier) => {
@@ -22,20 +23,17 @@ const getFighters = (props, tier) => {
 
 const Tierlist = props => {
   return (
-    <div
-      id='tierlist'
-      className='tierlist'
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        width: '50%',
-        backgroundColor: 'black',
-        borderRadius: 5,
-        marginTop: 10,
-        padding: 10,
-      }}
-    >
-      {props.editable ? '' : <TierlistInfo />}
+    <div id='tierlist' className='tierlist'>
+      {props.editable ? (
+        <NewTierlistForm
+          name={props.name}
+          title={props.title}
+          onInputChange={() => props.onInputChange}
+          onHandleSubmit={() => props.onHandleSubmit}
+        />
+      ) : (
+        <TierlistInfo />
+      )}
       {props.editable
         ? props.tiers.map(t => (
             <Tier

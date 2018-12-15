@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const TierlistSchema = new Schema({
-  author: { type: String, default: 'anonymous' },
+  author: { type: String, required: false },
+  title: { type: string, required: false },
   sTier: [],
   aTier: [],
   bTier: [],
