@@ -28,21 +28,17 @@ class TierlistContainer extends Component {
   }
 
   getTierlist() {
-    const id = this.props.path.substr(1);
+    const id = window.location.pathname.substr(1);
     api
       .getTierlist(id)
-      .then(res => {
-        this.setState({ ...res.data[0] });
-      })
+      .then(res => this.setState({ ...res.data }))
       .catch(err => console.log(err));
   }
 
   getRandomTierlist() {
     api
       .getRandomTierlist()
-      .then(res => {
-        this.setState({ ...res.data[0] });
-      })
+      .then(res => this.setState({ ...res.data[0] }))
       .catch(err => console.log(err));
   }
 

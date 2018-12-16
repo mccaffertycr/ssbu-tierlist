@@ -2,7 +2,7 @@ const tierlist = require('../database/models/tierlist');
 
 module.exports = {
   findTierlistById: (req, res) => {
-    const { id } = req.body;
+    const id = req.params.id;
     tierlist
       .findById(id)
       .then(dbTierlist => res.json(dbTierlist))
@@ -39,6 +39,7 @@ module.exports = {
       .find({})
       .limit(limit)
       .skip(offset)
+      .sort({ upvotes: -1 })
       .then(dbTierlists => res.json(dbTierlists))
       .catch(err => res.status(422).json(err));
   },

@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export default {
   getAllTierlists: () => axios.get('/api/tierlist'),
+  getTierlists: query => axios.get(`/api/tierlist/${query}`),
   getNewTierlists: () => axios.get('/api/tierlist/new'),
   getBestTierlists: () => axios.get('/api/tierlist/top'),
   getRandomTierlist: () => axios.get('/api/tierlist/random'),
