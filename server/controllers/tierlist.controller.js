@@ -61,7 +61,7 @@ module.exports = {
         req.session.upvoted.push(id);
         upvoteQuery(id);
       } else {
-        res.send('sorry you are only able to upvote a tierlist once');
+        res.json({ msg: 'sorry you are only able to upvote a tierlist once' });
       }
     }
     function upvoteQuery(id) {
@@ -69,7 +69,6 @@ module.exports = {
         .findByIdAndUpdate(id, { $inc: { upvotes: 1 } }, { new: true })
         .then(dbTierlist => {
           res.json({
-            msg: 'successfully upvoted tierlist!',
             upvotes: dbTierlist.upvotes,
           });
         })
