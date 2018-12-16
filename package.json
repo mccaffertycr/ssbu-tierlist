@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "concurrently \"nodemon\" \" cd client && npm run start\"",
     "start:prod": "node",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm install && npm run build",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
