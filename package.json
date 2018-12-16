@@ -4,10 +4,12 @@
   "description": "create and share fighter tierlists for for Super Smash Bros. Ultimate on the Nintendo Switch",
   "main": "server/index.js",
   "scripts": {
+    "start": "node",
     "start:dev": "concurrently \"nodemon\" \" cd client && npm run start\"",
     "start:prod": "node",
+    "server:install": "cd server && npm install",
     "build": "cd client && npm install && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run server:install && npm run build"
   },
   "repository": {
     "type": "git",
