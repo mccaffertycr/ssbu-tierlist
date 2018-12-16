@@ -8,11 +8,7 @@ import NoMatch from './NoMatch';
 const Routes = () => {
   return (
     <Switch>
-      <Route
-        exact
-        path='/'
-        render={() => <TierlistContainer random={true} />}
-      />
+      <Route exact path='/' render={() => <TierlistList query={'top'} />} />
       <Route exact path='/create' component={Create} />
       <Route exact path='/top' render={() => <TierlistList query={'top'} />} />
       <Route exact path='/new' render={() => <TierlistList query={'new'} />} />

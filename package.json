@@ -1,7 +1,7 @@
 {
   "name": "ssbu-tierlist",
   "version": "1.0.0",
-  "description": "tierlist building tool for Super Smash Bros. Ultimate",
+  "description": "create and share fighter tierlists for for Super Smash Bros. Ultimate on the Nintendo Switch",
   "main": "server/index.js",
   "scripts": {
     "start:dev": "concurrently \"nodemon\" \" cd client && npm run start\"",

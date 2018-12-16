@@ -4,14 +4,16 @@ import Fighter from './Fighter';
 import '../styles/tier.css';
 
 const Tier = props => {
+  const nonEditableStyles = props.editable ? {} : { alignItems: 'center' };
+
   return (
-    <div className='tier'>
+    <div className='tier' style={nonEditableStyles}>
       <h1
         style={{
           fontWeight: 'bold',
           fontSize: 64,
           webKitTextStroke: '2 black',
-          margin: 5,
+          margin: 10,
           maxWidth: '4rem',
         }}
         id={`${props.header}-header`}

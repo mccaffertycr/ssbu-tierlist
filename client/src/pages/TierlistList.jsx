@@ -40,9 +40,7 @@ class TierlistList extends Component {
             padding: '11px 24px',
           }}
         >
-          <h3>{`${window.location.pathname
-            .substr(1)
-            .toUpperCase()} TIERLISTS`}</h3>
+          <h3>{`${this.props.query.toUpperCase()} TIERLISTS`}</h3>
         </li>
         {this.state.tierlists.map(t => (
           <ListItem
