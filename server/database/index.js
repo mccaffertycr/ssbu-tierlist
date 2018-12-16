@@ -3,7 +3,11 @@ mongoose.Promise = global.Promise;
 
 const uri =
   process.env.MONGODB_URI || 'mongodb://localhost:27017/ssbu-tierlist-dev';
-const options = { useNewUrlParser: true, useCreateIndex: true };
+const options = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+};
 
 mongoose
   .connect(

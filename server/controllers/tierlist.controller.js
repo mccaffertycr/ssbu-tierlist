@@ -51,10 +51,29 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   upvoteTierlist: (req, res) => {
-    const { id } = req.body;
-    tierlist
-      .findByIdAndUpdate(id, { $inc: { upvotes: 1 } })
-      .then(dbTierlist => console.log(dbTierlist))
-      .catch(err => res.status(422).json(err));
+    const id = req.params.id;
+    if (!req.session.upvoted) {
+      req.session.upvoted = [];
+      req.session.upvoted.push(id);
+      upvoteQuery(id);
+    } else {
+      if (!req.session.upvoted.includes(id)) {
+        req.session.upvoted.push(id);
+        upvoteQuery(id);
+      } else {
+        res.send('sorry you are only able to upvote a tierlist once');
+      }
+    }
+    function upvoteQuery(id) {
+      tierlist
+        .findByIdAndUpdate(id, { $inc: { upvotes: 1 } }, { new: true })
+        .then(dbTierlist => {
+          res.json({
+            msg: 'successfully upvoted tierlist!',
+            upvotes: dbTierlist.upvotes,
+          });
+        })
+        .catch(err => res.status(422).json(err));
+    }
   },
 };

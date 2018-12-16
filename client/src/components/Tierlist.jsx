@@ -34,10 +34,12 @@ const Tierlist = props => {
         />
       ) : (
         <TierlistInfo
+          id={props._id}
           author={props.author}
           title={props.title}
           createdAt={props.createdAt}
           upvotes={props.upvotes}
+          upvoteTierlist={props.upvoteTierlist}
         />
       )}
       {props.editable

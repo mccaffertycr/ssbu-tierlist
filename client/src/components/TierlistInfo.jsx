@@ -21,6 +21,7 @@ const TierlistInfo = props => (
         borderRadius: 5,
         padding: 10,
       }}
+      onClick={() => props.upvoteTierlist(props.id)}
     >
       <FontAwesomeIcon style={{ color: 'gold' }} icon='trophy' />{' '}
       <span style={{ color: 'white' }}>{props.upvotes}</span>

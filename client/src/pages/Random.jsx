@@ -29,10 +29,25 @@ class Random extends Component {
       .catch(err => console.log(err));
   }
 
+  upvoteTierlist = id => {
+    api
+      .upvoteTierlist(id)
+      .then(res => {
+        console.log(res);
+        this.setState({ upvotes: res.data.upvotes });
+      })
+      .catch(err => console.log(err));
+  };
+
   render() {
     return (
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <Tierlist key={this.state._id} editable={false} {...this.state} />
+        <Tierlist
+          key={this.state._id}
+          editable={false}
+          upvoteTierlist={this.upvoteTierlist}
+          {...this.state}
+        />
       </div>
     );
   }
